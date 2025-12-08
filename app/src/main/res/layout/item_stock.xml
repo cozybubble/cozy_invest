@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="8dp"
+    android:gravity="center_vertical">
+
+    <!-- 卡片区域：占更大比例 -->
+<LinearLayout
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="8"
+    android:background="@drawable/bg_stock_card"
+    android:elevation="2dp"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+<TextView
+android:id="@+id/tvStockName"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="2.5"
+android:textSize="16sp"
+android:textStyle="bold"
+android:textColor="@color/text_primary" />
+
+<View
+android:layout_width="1dp"
+android:layout_height="24dp"
+android:layout_marginHorizontal="12dp"
+android:background="@color/divider_color" />
+
+<TextView
+android:id="@+id/tvStockPrice"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1.5"
+android:textSize="15sp"
+android:gravity="center"
+android:textColor="@color/text_secondary"
+android:clickable="true"
+android:focusable="true"
+android:background="?attr/selectableItemBackground" />
+
+<View
+android:layout_width="1dp"
+android:layout_height="24dp"
+android:layout_marginHorizontal="12dp"
+android:background="@color/divider_color" />
+
+<TextView
+android:id="@+id/tvStockChangeRate"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_weight="1.8"
+android:textSize="15sp"
+android:gravity="end"
+android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+<com.google.android.material.button.MaterialButton
+android:id="@+id/btn_delete"
+style="@style/Widget.Material3.Button.IconButton"
+android:layout_width="0dp"
+android:layout_height="40dp"
+android:layout_weight="1"
+    android:layout_marginStart="1dp"
+    android:contentDescription="删除"
+    app:icon="@drawable/ic_delete"
+    app:iconTint="@color/delete_button_red"
+    app:iconSize="30dp"
+    app:cornerRadius="50dp" />
+
+    </LinearLayout>
